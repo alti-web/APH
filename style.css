@@ -5,23 +5,23 @@
 
 /* --- Variables & Reset --- */
 :root {
-  --navy: #0f1b2d;
-  --navy-light: #1a2d4a;
-  --navy-mid: #243a5e;
+  --navy: #1e293b;
+  --navy-light: #334155;
+  --navy-mid: #475569;
   --white: #ffffff;
-  --gray-50: #f8f9fb;
+  --gray-50: #f4f6f8;
   --gray-100: #eef1f5;
   --gray-200: #d5dbe5;
   --gray-400: #8895a7;
   --gray-600: #4a5568;
-  --accent: #e8720c;
-  --accent-hover: #d46200;
-  --accent-light: rgba(232, 114, 12, 0.1);
+  --accent: #0ea5e9;
+  --accent-hover: #0284c7;
+  --accent-light: rgba(14, 165, 233, 0.1);
   --font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --radius: 12px;
   --radius-lg: 16px;
-  --shadow: 0 4px 24px rgba(15, 27, 45, 0.08);
-  --shadow-lg: 0 12px 40px rgba(15, 27, 45, 0.12);
+  --shadow: 0 4px 24px rgba(30, 41, 59, 0.08);
+  --shadow-lg: 0 12px 40px rgba(30, 41, 59, 0.12);
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -98,7 +98,7 @@ ul {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(232, 114, 12, 0.35);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.35);
 }
 
 .btn--primary {
@@ -137,14 +137,15 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(15, 27, 45, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all var(--transition);
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .header--scrolled {
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 20px rgba(30, 41, 59, 0.1);
 }
 
 .header__inner {
@@ -170,7 +171,7 @@ ul {
 }
 
 .header__brand {
-  color: var(--white);
+  color: var(--navy);
   font-weight: 700;
   font-size: 1.15rem;
   line-height: 1.2;
@@ -191,7 +192,7 @@ ul {
 }
 
 .header__link {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--gray-600);
   font-size: 0.9rem;
   font-weight: 500;
   padding: 8px 16px;
@@ -201,8 +202,8 @@ ul {
 
 .header__link:hover,
 .header__link.active {
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
+  background: var(--accent-light);
 }
 
 .header__cta {
@@ -226,7 +227,7 @@ ul {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--white);
+  background: var(--navy);
   border-radius: 2px;
   transition: all var(--transition);
 }
@@ -249,10 +250,10 @@ ul {
   top: 72px;
   left: 0;
   right: 0;
-  background: var(--navy);
+  background: var(--white);
   padding: 16px 20px 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid var(--gray-100);
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.12);
 }
 
 .header__nav.open .header__link {
@@ -281,9 +282,9 @@ ul {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(15, 27, 45, 0.82) 0%,
-    rgba(15, 27, 45, 0.65) 50%,
-    rgba(15, 27, 45, 0.85) 100%
+    rgba(30, 41, 59, 0.80) 0%,
+    rgba(30, 41, 59, 0.60) 50%,
+    rgba(30, 41, 59, 0.82) 100%
   );
 }
 
@@ -326,7 +327,7 @@ ul {
    ========================================== */
 .services {
   padding: 0;
-  background: var(--navy);
+  background: var(--gray-50);
 }
 
 .services__header {
@@ -344,7 +345,7 @@ ul {
 }
 
 .services .section-title {
-  color: var(--white);
+  color: var(--navy);
 }
 
 .section-subtitle {
@@ -356,7 +357,7 @@ ul {
 }
 
 .services .section-subtitle {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--gray-400);
 }
 
 .services__grid {
@@ -394,9 +395,9 @@ ul {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(15, 27, 45, 0.92) 0%,
-    rgba(15, 27, 45, 0.5) 45%,
-    rgba(15, 27, 45, 0.2) 100%
+    rgba(30, 41, 59, 0.92) 0%,
+    rgba(30, 41, 59, 0.5) 45%,
+    rgba(30, 41, 59, 0.2) 100%
   );
   transition: background var(--transition);
 }
@@ -404,9 +405,9 @@ ul {
 .service-card:hover .service-card__overlay {
   background: linear-gradient(
     to top,
-    rgba(232, 114, 12, 0.85) 0%,
-    rgba(15, 27, 45, 0.5) 50%,
-    rgba(15, 27, 45, 0.15) 100%
+    rgba(14, 165, 233, 0.85) 0%,
+    rgba(30, 41, 59, 0.5) 50%,
+    rgba(30, 41, 59, 0.15) 100%
   );
 }
 
@@ -423,8 +424,8 @@ ul {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: rgba(232, 114, 12, 0.2);
-  border: 2px solid rgba(232, 114, 12, 0.4);
+  background: rgba(14, 165, 233, 0.2);
+  border: 2px solid rgba(14, 165, 233, 0.4);
   border-radius: 16px;
   margin-bottom: 16px;
   color: var(--accent);
@@ -495,7 +496,7 @@ ul {
    ========================================== */
 .reassurance {
   padding: 80px 0;
-  background: var(--navy);
+  background: var(--white);
   position: relative;
   overflow: hidden;
 }
@@ -507,16 +508,16 @@ ul {
   right: -20%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(232, 114, 12, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .section-title--light {
-  color: var(--white);
+  color: var(--navy);
 }
 
 .section-subtitle--light {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--gray-400);
 }
 
 .reassurance__grid {
@@ -536,7 +537,7 @@ ul {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: rgba(232, 114, 12, 0.15);
+  background: var(--accent-light);
   border-radius: 50%;
   margin-bottom: 18px;
   color: var(--accent);
@@ -545,13 +546,13 @@ ul {
 .reassurance__title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy);
   margin-bottom: 8px;
 }
 
 .reassurance__text {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--gray-600);
   line-height: 1.65;
   max-width: 320px;
   margin: 0 auto;
@@ -682,7 +683,7 @@ ul {
 .footer {
   background: var(--navy);
   padding: 64px 0 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .footer__grid {
